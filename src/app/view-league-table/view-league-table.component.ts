@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Tip } from '../tip';
 import { Standing } from '../standing';
 import { DataService } from '../data.service';
 
@@ -11,19 +10,12 @@ import { DataService } from '../data.service';
 })
 export class ViewLeagueTableComponent implements OnInit {
 
-  
-  tips!: Tip[];
   standings!: Standing[];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.getTips();
     this.getStandings();
-  }
-
-  getTips(): void {
-    this.dataService.getTips().subscribe(temp => { this.tips = temp; });
   }
 
   getStandings(): void {

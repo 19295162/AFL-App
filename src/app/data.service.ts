@@ -11,6 +11,7 @@ import { Player } from './player';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
 
   constructor(private http: HttpClient) { }
@@ -57,7 +58,7 @@ export class DataService {
 
 
   getTips(): Observable<Tip[]> {
-    return this.http.get('https://api.squiggle.com.au/?q=tips;year=2019;round=20').pipe(map((data: any) => data.tips.map((item: any) => 
+    return this.http.get('https://api.squiggle.com.au/?q=tips;year=2021').pipe(map((data: any) => data.tips.map((item: any) => 
       new Tip(
         item.tip,
         item.round,
@@ -105,7 +106,7 @@ export class DataService {
   }
 
   getPlayers(): Observable<Player[]> {
-    return this.http.get('https://api.squiggle.com.au/?q=pav;year=2019').pipe(map((data: any) => data.players.map((item: any) => 
+    return this.http.get('https://api.squiggle.com.au/?q=pav').pipe(map((data: any) => data.pav.map((item: any) =>
       new Player(
         item.games,
         item.PAV_total,

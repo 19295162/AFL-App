@@ -5,15 +5,18 @@
             <th>Home Team</th>
             <th>Away Team</th>
             <th>Score</th>
+            <th>Venue</th>
             <th>Winer</th>
         </tr>
 
-        <tr *ngFor="let g of games">
+        <tr *ngFor="let g of games" (click)="onSelect(g)">
             <td>{{g.hteam}}</td>
             <td>{{g.ateam}}</td>
             <td>{{g.hscore}}-{{g.ascore}}</td>
+            <td>{{g.venue}}</td>
             <td>{{g.winner}}</td>
         </tr>
     </table>
+    <app-tip *ngIf="selectedGame !== undefined && selectedGame !== null" [game]="selectedGame"></app-tip>
     <br><br>
 </div>

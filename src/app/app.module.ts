@@ -9,6 +9,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { TeamComponent } from './team/team.component';
 import { GameComponent } from './game/game.component';
 import { PlayerComponent } from './player/player.component';
+import { TipComponent } from './tip/tip.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PlayerComponent } from './player/player.component';
     ViewLeagueTableComponent,
     TeamComponent,
     GameComponent,
-    PlayerComponent
+    PlayerComponent,
+    TipComponent
   ],
   imports: [
     BrowserModule,
