@@ -1,0 +1,43 @@
+<!--Standings for 2021-->
+<div>
+    <table style="text-align:center;">
+        <tr>
+            <th>Team</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Draws</th>
+            <th>Points</th>
+            <th>Rank</th>
+        </tr>
+
+        <tr *ngFor="let s of standings">
+            <td>{{s.name}}</td>
+            <td>{{s.wins}}</td>
+            <td>{{s.losses}}</td>
+            <td>{{s.draws}}</td>
+            <td>{{s.pts}}</td>
+            <td>{{s.rank}}</td>
+        </tr>
+    </table>
+    <br><br>
+</div>
+
+<!--Tips for a round of games-->
+<div>
+    <table style="text-align:center;">
+        <tr>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Tip</th>
+            <th>Source</th>
+        </tr>
+
+        <tr *ngFor="let t of tips">
+            <td>{{t.hteam}}</td>
+            <td>{{t.ateam}}</td>
+            <td>{{t.tip}}</td>
+            <td>{{t.source}}</td>
+        </tr>
+    </table>
+    <br><br>
+</div>

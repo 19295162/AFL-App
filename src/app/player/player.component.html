@@ -1,0 +1,16 @@
+<!--Player stats for 2019-->
+<div>
+    <table style="text-align:center;">
+        <tr>
+            <th>Name</th>
+            <th>Team</th>
+            <th>Total Rank</th>
+        </tr>
+
+        <tr *ngFor="let p of players">
+            <td>{{p.name}}</td>
+            <td>{{p.team}}</td>
+            <td>{{p.PAV_total_rank}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,18 @@
+<!--Teams list-->
+<div id="TeamDiv">
+    <ul>
+        <li class="items" style="display:inline;" *ngFor="let t of teams" (click)="onSelect(t.id)">
+            <span><img src="https://squiggle.com.au/{{t.logo}}" style="margin: 8px; width: 100px; height: 100px;"></span>
+        </li>
+    </ul>
+</div>
+
+<!--Teams list
+<div id="TeamDiv">
+    <table style="display:inline;">
+        <tr *ngFor="let t of teams">
+            <td><img src="https://squiggle.com.au/{{t.logo}}" style="margin: 8px; width: 100px; height: 100px;"></td>
+        </tr>
+    </table>
+    <br><br>
+</div>-->
