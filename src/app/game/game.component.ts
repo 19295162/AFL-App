@@ -1,10 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { Game } from '../game';
-import { Team } from "../team";
-import { Tip } from "../tip";
 import { DataService } from '../data.service';
-import { TeamComponent } from '../team/team.component';
 import { UserService } from '../user.service';
 
 @Component({
@@ -17,16 +13,22 @@ export class GameComponent implements OnInit {
   games!: Game[];
   teamId!: number;
   selectedGame!: Game;
+  gameId!: number;
 
   constructor(private dataService: DataService, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.selectedTeam.subscribe(id => this.teamId = id);
-    this.getGames();
+    this.userService.selectedTeam.subscribe(data => {
+      if(data !== this.teamId){
+        this.teamId = data;
+        this.getGames();
+      }
+    });
   }
 
   onSelect(game: Game): void {
     this.selectedGame = game;
+    this.gameId = this.selectedGame.id;
   }
 
   getGames(): void {

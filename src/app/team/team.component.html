@@ -2,7 +2,7 @@
 <div id="teamDiv">
     <ul>
         <li class="logoNav" *ngFor="let t of teams">
-            <span><img class="teamLogo" (click)="onSelect(t.id)" src="https://squiggle.com.au/{{t.logo}}"></span>
+            <span><img [ngClass]="{'selected': selectedTeam == t.id }" class="teamLogo" (click)="onSelect(t.id)" src="https://squiggle.com.au/{{t.logo}}"></span>
         </li>
     </ul>
 </div>

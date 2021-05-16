@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Team } from '../team'; 
 import { DataService } from '../data.service'; 
 import { Router } from '@angular/router';
-import { GameComponent } from '../game/game.component';
 import { UserService } from '../user.service';
-import { element } from 'protractor';
 
 @Component({
   selector: 'app-team',
@@ -26,8 +23,7 @@ export class TeamComponent implements OnInit {
   }
 
   onSelect(teamId: number): void {
-    this.updateSelectedTeam(teamId)
-    this.router.navigateByUrl('Game');
+    this.updateSelectedTeam(teamId);
   }
   
   getTeams(): void {
@@ -35,7 +31,12 @@ export class TeamComponent implements OnInit {
   }
 
   updateSelectedTeam(teamId: number){
+    this.selectedTeam = teamId;
     this.userService.changeTeam(teamId);
+  }
+
+  setSelected(){
+
   }
 
 }

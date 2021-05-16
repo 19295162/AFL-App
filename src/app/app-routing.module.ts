@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ViewLeagueTableComponent } from './view-league-table/view-league-table.component'; 
 import { TeamComponent } from './team/team.component';

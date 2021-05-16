@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Player } from '../player';
 import { DataService } from '../data.service';
 import { UserService } from '../user.service';
@@ -17,8 +16,12 @@ export class PlayerComponent implements OnInit {
   constructor(private dataService: DataService, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.selectedTeam.subscribe(id => this.teamId = id);
-    this.getPlayers();
+    this.userService.selectedTeam.subscribe(data => {
+      if(data !== this.teamId){
+        this.teamId = data;
+        this.getPlayers();
+      }
+    });
   }
 
   getPlayers(): void {
