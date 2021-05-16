@@ -1,19 +1,15 @@
 <!--Tips for a round of games-->
 <div>
     <div>
-        <table style="text-align:center;">
+        <table id='tipTable'>
             <tr>
-                <th>Home Team</th>
-                <th>Away Team</th>
-                <th>Tip</th>
                 <th>Source</th>
+                <th>Tip</th>
             </tr>
 
             <tr *ngFor="let t of tips">
-                <td>{{t.hteam}}</td>
-                <td>{{t.ateam}}</td>
-                <td>{{t.tip}}</td>
                 <td>{{t.source}}</td>
+                <td>{{t.tip}}</td>
             </tr>
         </table>
     </div>

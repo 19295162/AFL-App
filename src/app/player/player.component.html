@@ -2,15 +2,15 @@
 <div *ngIf="teamId !== 100; else noTeamSelected">
     <div id="playerDiv" *ngFor="let p of players">
         <div id="playerData">
-            <p>{{p.name}}</p>
-            <p>Def rank: {{p.PAV_def_rank}}</p>
-            <p>Mid rank: {{p.PAV_mid_rank}}</p>
-            <p>Off rank: {{p.PAV_off_rank}}</p>
-            <p>Total rank: {{p.PAV_total_rank}}</p>
+            <h3><b>{{p.name}}</b></h3>
+            <p><b>Def rank:</b> {{p.PAV_def_rank}}</p>
+            <p><b>Mid rank:</b> {{p.PAV_mid_rank}}</p>
+            <p><b>Off rank:</b> {{p.PAV_off_rank}}</p>
+            <p><b>Total rank:</b> {{p.PAV_total_rank}}</p>
         </div>
     </div>
 </div>
 
 <ng-template #noTeamSelected>
-    <p>Please select a team to see its players.</p>
+    <h2 id='error'>Please select a team to see its players.</h2>
 </ng-template>

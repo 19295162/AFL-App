@@ -2,11 +2,22 @@
 {
     margin: 5px;
     padding: 2px;
-    display: flex;
+    display: inline-flex;
     border-style: solid;
+    width: 250px;
+    background-color: white;
 }
 
 #playerData
 {
-    text-align: center;
+    flex: 1;
+    text-align: left;
+    padding: 15px;
+    margin: 15px;
+}
+
+#error
+{
+    padding: 30px;
+    background-color: white;
 }

@@ -2,13 +2,25 @@
 {
     margin: 5px;
     padding: 2px;
-    display: flex;
+    display: inline-flex;
     border-style: solid;
+    width: 450px;
+    background-color: white;
 }
 
 #gameData
 {
     flex: 1;
     text-align: center;
+}
+
+#tipAside
+{
+    float: right;
+    width: 25%;
+    background-color: white;
+    margin: 5px;
+    padding: 2px;
+    border-style: solid;
 }
 

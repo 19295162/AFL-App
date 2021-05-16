@@ -1,18 +1,21 @@
 <!--Results for a round of games-->
 <div>
+    <aside id='tipAside'>
+        <h3><b>Game Tips</b></h3>
+        <app-tip *ngIf="selectedGame !== undefined && selectedGame !== null" [game]="selectedGame"></app-tip>
+    </aside>
     <div id="gameDiv" *ngFor="let g of games" (click)="onSelect(g)">
         <div id="gameData">
-            <p>{{g.hteam}}</p>
+            <h3>{{g.hteam}}</h3>
         </div>
         <div id="gameData">
-            <p>{{g.date | date:'dd/MM/YYYY'}}</p>
-            <p>{{g.hscore}}-{{g.ascore}}</p>
-            <p>{{g.venue}}</p>
+            <p><b>{{g.date | date:'dd/MM/YYYY'}}</b></p>
+            <h3>{{g.hscore}}-{{g.ascore}}</h3>
+            <p><b>{{g.venue}}</b></p>
         </div>
         <div id="gameData">
-            <p>{{g.ateam}}</p>
+            <h3>{{g.ateam}}</h3>
         </div>  
     </div>
-    <app-tip *ngIf="selectedGame !== undefined && selectedGame !== null" [game]="selectedGame"></app-tip>
-    <br><br>
+    
 </div>
