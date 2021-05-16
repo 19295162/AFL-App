@@ -1,0 +1,14 @@
+#gameDiv
+{
+    margin: 5px;
+    padding: 2px;
+    display: flex;
+    border-style: solid;
+}
+
+#gameData
+{
+    flex: 1;
+    text-align: center;
+}
+

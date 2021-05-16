@@ -1,22 +1,18 @@
 <!--Results for a round of games-->
 <div>
-    <table style="text-align:center;">
-        <tr>
-            <th>Home Team</th>
-            <th>Away Team</th>
-            <th>Score</th>
-            <th>Venue</th>
-            <th>Winer</th>
-        </tr>
-
-        <tr *ngFor="let g of games" (click)="onSelect(g)">
-            <td>{{g.hteam}}</td>
-            <td>{{g.ateam}}</td>
-            <td>{{g.hscore}}-{{g.ascore}}</td>
-            <td>{{g.venue}}</td>
-            <td>{{g.winner}}</td>
-        </tr>
-    </table>
+    <div id="gameDiv" *ngFor="let g of games" (click)="onSelect(g)">
+        <div id="gameData">
+            <p>{{g.hteam}}</p>
+        </div>
+        <div id="gameData">
+            <p>{{g.date | date:'dd/MM/YYYY'}}</p>
+            <p>{{g.hscore}}-{{g.ascore}}</p>
+            <p>{{g.venue}}</p>
+        </div>
+        <div id="gameData">
+            <p>{{g.ateam}}</p>
+        </div>  
+    </div>
     <app-tip *ngIf="selectedGame !== undefined && selectedGame !== null" [game]="selectedGame"></app-tip>
     <br><br>
 </div>

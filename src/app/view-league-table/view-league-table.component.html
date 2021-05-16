@@ -1,22 +1,26 @@
 <!--Standings for 2021-->
 <div>
-    <table style="text-align:center;">
+    <table>
         <tr>
+            <th>Rank</th>
             <th>Team</th>
+            <th>Games Played</th>
+            <th>Points</th>
+            <th>Percentage</th>
             <th>Wins</th>
             <th>Losses</th>
             <th>Draws</th>
-            <th>Points</th>
-            <th>Rank</th>
         </tr>
 
         <tr *ngFor="let s of standings">
-            <td>{{s.name}}</td>
+            <td>{{s.rank}}</td>
+            <td style="text-align: left;">{{s.name}}</td>
+            <td>{{s.played}}</td>
+            <td>{{s.pts}}</td>
+            <td>{{s.percentage | number:'1.2-2'}}%</td>
             <td>{{s.wins}}</td>
             <td>{{s.losses}}</td>
             <td>{{s.draws}}</td>
-            <td>{{s.pts}}</td>
-            <td>{{s.rank}}</td>
         </tr>
     </table>
     <br><br>

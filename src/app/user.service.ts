@@ -11,7 +11,7 @@ export class UserService {
 
   constructor() { }
 
-  changeTeam(id : number){
+  changeTeam(id: number){
     this.teamSource.next(id);
   }
 }

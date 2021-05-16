@@ -1,16 +1,16 @@
 <!--Player stats for 2019-->
-<div>
-    <table style="text-align:center;">
-        <tr>
-            <th>Name</th>
-            <th>Team</th>
-            <th>Total Rank</th>
-        </tr>
-
-        <tr *ngFor="let p of players">
-            <td>{{p.name}}</td>
-            <td>{{p.team}}</td>
-            <td>{{p.PAV_total_rank}}</td>
-        </tr>
-    </table>
+<div *ngIf="teamId !== 100; else noTeamSelected">
+    <div id="playerDiv" *ngFor="let p of players">
+        <div id="playerData">
+            <p>{{p.name}}</p>
+            <p>Def rank: {{p.PAV_def_rank}}</p>
+            <p>Mid rank: {{p.PAV_mid_rank}}</p>
+            <p>Off rank: {{p.PAV_off_rank}}</p>
+            <p>Total rank: {{p.PAV_total_rank}}</p>
+        </div>
+    </div>
 </div>
+
+<ng-template #noTeamSelected>
+    <p>Please select a team to see its players.</p>
+</ng-template>

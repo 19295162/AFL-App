@@ -1,0 +1,24 @@
+#navbar
+{
+	background-color: red;
+	color: black;
+}
+
+#navbar a
+{
+	display: inline-block;
+	text-align: center;
+    font-size: medium;
+    font-weight: bold;
+	width: 8em;
+	line-height: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+	background-color:red;
+}
+
+#navbar a:hover
+{
+	background-color: white;
+}

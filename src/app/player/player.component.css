@@ -1,0 +1,12 @@
+#playerDiv
+{
+    margin: 5px;
+    padding: 2px;
+    display: flex;
+    border-style: solid;
+}
+
+#playerData
+{
+    text-align: center;
+}

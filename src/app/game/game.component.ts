@@ -6,7 +6,6 @@ import { Tip } from "../tip";
 import { DataService } from '../data.service';
 import { TeamComponent } from '../team/team.component';
 import { UserService } from '../user.service';
-import { element } from 'protractor';
 
 @Component({
   selector: 'app-game',
@@ -18,7 +17,6 @@ export class GameComponent implements OnInit {
   games!: Game[];
   teamId!: number;
   selectedGame!: Game;
-
 
   constructor(private dataService: DataService, private userService: UserService) { }
 

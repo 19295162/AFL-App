@@ -5,6 +5,7 @@ import { DataService } from '../data.service';
 import { Router } from '@angular/router';
 import { GameComponent } from '../game/game.component';
 import { UserService } from '../user.service';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-team',

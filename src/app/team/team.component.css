@@ -1,0 +1,19 @@
+#teamDiv
+{
+    height: 100px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.logoNav
+{
+    display: inline;
+}
+
+.teamLogo 
+{
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
